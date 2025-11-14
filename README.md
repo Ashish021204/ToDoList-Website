@@ -3,9 +3,7 @@ A simple and modern To-Do List application built with pure HTML, CSS, and Vanill
 
 
 <!-- README.md -->
-# To-Do List App
 
-A clean, responsive To-Do List web app built with **HTML**, **CSS**, and **Vanilla JavaScript**.
 
 ## Features
 - Add tasks (via Add button or pressing Enter)
