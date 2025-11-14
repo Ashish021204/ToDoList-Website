@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="A clean, responsive To-Do List web app built with HTML, CSS and vanilla JavaScript." />
+  <title>To-Do List App</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#task-input">Skip to input</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <!-- simple inline svg logo -->
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="1.5" y="1.5" width="21" height="21" rx="5" fill="#0ea5a4"></rect>
+          <path d="M7 12.5l3 3 7-9" stroke="#04263a" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1 class="brand__title">To-Do List App</h1>
+      </div>
+      <p class="brand__tag">Simple • Fast • Accessible</p>
+    </div>
+  </header>
+
+  <main class="main" id="main">
+    <section class="task-section container" aria-labelledby="app-heading">
+      <h2 id="app-heading" class="visually-hidden">To-Do List App</h2>
+
+      <div class="card input-card" role="region" aria-label="Add new task">
+        <form id="task-form" class="task-form" autocomplete="off" novalidate>
+          <label for="task-input" class="label">Add a new task</label>
+          <div class="input-row">
+            <input id="task-input" name="task" type="text" placeholder="Add a new task..." aria-label="Task description" required>
+            <button id="add-btn" class="btn btn--primary" type="submit" aria-label="Add task">
+              <!-- plus icon -->
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/>
+              </svg>
+              Add
+            </button>
+          </div>
+          <p class="hint" id="hint">Press <kbd>Enter</kbd> or click <strong>Add</strong></p>
+        </form>
+      </div>
+
+      <div class="card list-card" role="region" aria-label="Your tasks">
+        <h3 class="list-heading">Your tasks</h3>
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+        <div class="list-footer">
+          <span id="counter" class="counter" aria-live="polite">0 tasks</span>
+          <div class="list-actions">
+            <button id="clear-completed" class="btn btn--ghost" type="button">Clear completed</button>
+            <button id="clear-all" class="btn btn--ghost" type="button">Clear all</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card info-card" role="note" aria-label="How it works">
+        <h3>How it works</h3>
+        <ol>
+          <li>Type a task and press <kbd>Enter</kbd> or click <strong>Add</strong>.</li>
+          <li>Mark tasks complete using the checkbox — completed tasks are crossed out.</li>
+          <li>Delete individual tasks or clear completed/all using the footer buttons.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with ❤️ • <strong>HTML</strong>, <strong>CSS</strong>, <strong>Vanilla JS</strong></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
